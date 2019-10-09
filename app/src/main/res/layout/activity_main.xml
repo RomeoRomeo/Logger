@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+
+    <Button
+        android:id="@+id/buttonShowPopUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show AlertDialog with ListView"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start DBflightlistholder"
+        android:onClick="editPilot"
+        android:id="@+id/editPilot"
+        android:layout_below="@+id/addPilot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill Pilots"
+        android:id="@+id/checkPilotStore"
+        android:onClick="testPilotStore"
+        android:layout_alignTop="@+id/LoadGlidersBtn"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Pilot"
+        android:id="@+id/addPilot"
+        android:onClick="addPilot"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Cursor Edit"
+        android:id="@+id/testCursorEdit"
+        android:onClick="testCursorEdit"
+        android:layout_alignBottom="@+id/addPilot"
+        android:layout_alignEnd="@+id/buttonShowPopUp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Data from sheets"
+        android:id="@+id/editFlightBtn"
+        android:layout_alignTop="@+id/editPilot"
+        android:layout_alignEnd="@+id/testCursorEdit"
+        android:onClick="editFlight"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Gliders"
+        android:id="@+id/LoadGlidersBtn"
+        android:onClick="loadGliders"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/testCursorEdit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Flight"
+        android:id="@+id/addFlightBtn"
+        android:onClick="addFlight"
+        android:layout_below="@+id/editFlightBtn"
+        android:layout_alignEnd="@+id/editFlightBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Flightlist"
+        android:id="@+id/showFlightList"
+        android:layout_below="@+id/LoadGlidersBtn"
+        android:layout_alignEnd="@+id/LoadGlidersBtn"
+        android:onClick="showFlightList"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill Flights"
+        android:id="@+id/fillFlightBtn"
+        android:layout_below="@+id/checkPilotStore"
+        android:layout_alignParentStart="true"
+        android:onClick="fillFlights"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:id="@+id/timeBtn"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/buttonShowPopUp"
+        android:onClick="showTime"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Sheets:"
+        android:id="@+id/showSheetsBtn"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="showSheetsCom"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill Tugs"
+        android:id="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/addFlightBtn"
+        android:layout_above="@+id/checkPilotStore"
+        android:onClick="fillTugs" />
+
+
+</RelativeLayout>
+
+

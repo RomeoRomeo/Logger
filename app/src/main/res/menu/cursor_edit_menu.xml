@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+   <!-- <item
+        android:orderInCategory="90"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_black_24"
+        android:title="Menu"/>
+        -->
+    <item
+        android:id="@+id/delete_item"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_delete_forever_black_24dp"
+        android:title="Delete"
+    />
+
+    <item
+        android:id="@+id/done"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_done_black_24dp"
+        android:title="Done"
+        >
+    </item>
+
+
+</menu>

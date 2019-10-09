@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+   <!-- <item
+        android:orderInCategory="90"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_black_24"
+        android:title="Menu"/>
+        -->
+    <item
+        android:id="@+id/filter_grid"
+        android:icon="@drawable/ic_grid"
+        android:orderInCategory="100"
+        android:title="In Grid"
+        app:showAsAction="always" />
+
+        <item
+         android:id="@+id/filter_grid_active"
+         android:icon="@drawable/ic_grid_active"
+         android:orderInCategory="100"
+         android:title="In Grid"
+         app:showAsAction="always"/>
+
+     <item
+         android:id="@+id/filter_air"
+         android:orderInCategory="100"
+         app:showAsAction="always"
+         android:icon="@drawable/ic_air"
+         android:title="In Flight"/>
+
+     <item
+         android:id="@+id/filter_air_active"
+         android:orderInCategory="100"
+         app:showAsAction="always"
+         android:icon="@drawable/ic_air_active"
+         android:title="In Flight"/>
+
+     <item
+         android:id="@+id/filter_ground"
+         android:orderInCategory="100"
+         app:showAsAction="always"
+         android:icon="@drawable/ic_ground"
+         android:title="On Ground"/>
+
+   <item
+        android:id="@+id/filter_ground_active"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_ground_active"
+        android:title="On Ground"/>
+
+
+
+
+</menu>

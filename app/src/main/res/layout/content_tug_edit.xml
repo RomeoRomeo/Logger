@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.mtwashingtonsoaring.logger.TugEditActivity"
+    tools:showIn="@layout/activity_tug_edit"
+    android:id="@+id/editTextDisc">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tug:"
+        android:id="@+id/tugPrompt"
+        android:layout_alignTop="@+id/editTextTug"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTug"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tugPrompt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Club:"
+        android:id="@+id/TugClubPrompt"
+        android:layout_alignTop="@+id/editTextTugClub"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTugClub"
+        android:layout_below="@+id/editTextTug"
+        android:layout_toEndOf="@+id/TugClubPrompt"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:id="@+id/textViewDescriptionPrompt"
+        android:layout_alignTop="@+id/editTextTugDiscription"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTugDiscription"
+        android:layout_below="@+id/editTextTugClub"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textViewDescriptionPrompt" />
+</RelativeLayout>

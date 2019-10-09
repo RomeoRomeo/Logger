@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:title="Google Sheets URL"
+        android:key="prefs_sheets_url"
+        android:defaultValue="1fFLur7_QlrY8Mvtd1HHfE8Fe7EXKez4ZYtZaLzL9lsc"
+        android:dialogTitle="Enter your Google Sheet URL"
+        />
+
+    <CheckBoxPreference
+        android:title="Backup to SD Card"
+        android:key="prefs_backup_Yes"
+        android:defaultValue="false"
+        android:dialogTitle="b\Backup to External SD Card?"
+        />
+
+    <EditTextPreference
+        android:title="External CD BackupPath"
+        android:key="prefs_backup_path"
+        android:defaultValue="\mnt\external_sd\loggerBackup\logger.db"
+        android:dialogTitle="Enter the full path to your external sc card"
+        />
+
+</PreferenceScreen>

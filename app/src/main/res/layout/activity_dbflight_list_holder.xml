@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    tools:context="org.mtwashingtonsoaring.logger.FlightListHolder">
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--
+    <fragment
+
+        android:name="org.mtwashingtonsoaring.logger.FlightListFragment"
+        android:id="@+id/fragment_dbflight_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_dbflight_list">
+
+    </fragment>
+-->
+    <android.widget.FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </android.widget.FrameLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="#000000"
+        app:backgroundTint="#dddddd"
+
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!-- The navigation drawer list-->
+<ListView
+    android:id="@+id/drawer_list"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="#111"
+    android:choiceMode="singleChoice"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0dp" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

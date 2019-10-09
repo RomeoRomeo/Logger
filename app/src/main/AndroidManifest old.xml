@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.mtwashingtonsoaring.logger">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logger_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".FlightListHolder">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListCursorActivity"
+            android:label="Edit Pilot"
+            android:launchMode="standard" />
+        <activity
+            android:name=".EditCursorActivity"
+            android:label="Edit Cursor"
+            android:launchMode="standard" />
+        <activity
+            android:name=".FlightEditActivity"
+            android:icon="@drawable/ic_menu_black_24"
+            android:label="Main" />
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/ic_menu_black_24"
+            android:label="Main" />
+        <activity
+            android:name=".SheetsComGetData"
+            android:label="SheetsCom" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".TestSDCardWrite"
+            android:label="@string/title_activity_test_sdcard_write"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+    </application>
+
+</manifest>

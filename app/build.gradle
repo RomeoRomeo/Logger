@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'mtwash'
+            keyPassword 'ZeftySmootkey1'
+            storeFile file('C:/Users/Rickr/Dropbox (Personal)/Code/KeyStore/MtWashingtonKeyStore.jks')
+            storePassword 'ZeftySmootks1'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "org.mtwashingtonsoaring.logger"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName ',1'
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+ //           applicationVariants.all { variant ->
+//                renameAPK(variant, defaultConfig, 'R')
+//                }
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation('com.google.api-client:google-api-client-android:1.30.4') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation('com.google.apis:google-api-services-sheets:v4-rev9-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+   }
+    // implementation  'com.google.android.gms:play-services-auth:9.0.2'
+    //  implementation  'com.google.android.gms:play-services:9.2.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'pub.devrel:easypermissions:0.1.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation files('libs/opencsv-4.6.jar')
+}
+    apply plugin: 'com.google.gms.google-services'
+
+/*
+def renameAPK(variant, defaultConfig, buildType) {
+    variant.outputs.each { output ->
+        def formattedDate = new Date().format('yyMMdd')
+
+        def file = output.packageApplication.outputFile
+        def fileName = applicationName + "_V" + defaultConfig.versionCode + "_" + formattedDate + "_" + buildType + ".apk"
+        output.packageApplication.outputFile = new File(file.parent, fileName)
+    }
+}
+
+ */

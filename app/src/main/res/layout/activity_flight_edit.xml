@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="org.mtwashingtonsoaring.logger.FlightEditActivity">
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerCID"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textSize="40sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="P1:"
+            android:id="@+id/textViewP1Prompt"
+            android:layout_toRightOf="@+id/spinnerCID"
+            android:layout_alignBottom="@+id/tvaPilotOne"
+            android:layout_toLeftOf="@id/textViewP1Prompt"
+            />
+
+        <org.mtwashingtonsoaring.logger.InstantAutoComplete
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvaPilotOne"
+            android:layout_alignTop="@+id/spinnerCID"
+            android:layout_toEndOf="@+id/textViewP1Prompt"
+            android:layout_alignParentRight="true"
+            android:spinnerMode="dropdown"
+            android:hint = "Enter Pilot Name"
+            android:selectAllOnFocus="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="P2:"
+            android:id="@+id/textViewP2Prompt"
+            android:layout_toRightOf="@+id/spinnerCID"
+            android:layout_alignBottom="@+id/tvaPilotTwo"
+
+            />
+
+        <org.mtwashingtonsoaring.logger.InstantAutoComplete
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvaPilotTwo"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvaPilotOne"
+            android:layout_toEndOf="@+id/textViewP2Prompt"
+            android:hint = "Enter Pilot Name"
+            android:selectAllOnFocus="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BillTo:"
+            android:id="@+id/textViewBillToPrompt"
+            android:layout_alignBottom="@+id/tvaBillTo"
+            android:layout_toRightOf="@+id/spinnerCID"
+            android:paddingBottom="10dp"
+            />
+
+        <org.mtwashingtonsoaring.logger.InstantAutoComplete
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvaBillTo"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvaPilotTwo"
+            android:layout_toEndOf="@+id/textViewBillToPrompt"
+            android:paddingLeft="2dp"
+            android:paddingBottom="10dp"
+            android:hint = "Enter Pilot Name"
+            android:selectAllOnFocus="true"
+            />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:id="@+id/viewFlightMode"
+            android:layout_below="@+id/tvaBillTo"
+            android:paddingTop="20sp"
+            android:paddingBottom="20sp"/>
+
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerFlightType"
+            android:layout_below="@+id/viewFlightMode"
+            android:layout_alignParentLeft="true"
+            />
+
+
+                <RadioGroup
+                    android:id="@+id/radioFlightMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewFlightMode"
+                    android:orientation='horizontal'
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/radioGrid"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Grid | "
+
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/radioAir"
+                        android:layout_height="wrap_content"
+                        android:text="Flight | "
+                          />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/radioGround"
+                        android:layout_height="wrap_content"
+                        android:text="Ground"
+                        />
+
+                </RadioGroup>
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:id="@+id/viewTowSection"
+            android:layout_below="@+id/radioFlightMode"
+            android:paddingTop="20sp"
+            android:paddingBottom="20sp"/>
+
+        <TextView
+            android:id="@+id/textViewTowPlanePrompt"
+            android:text="Tug:"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/viewTowSection"
+            android:layout_alignParentStart="true"
+            android:paddingTop="20sp"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerTowPlane"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/viewTowSection"
+            android:layout_toEndOf="@+id/textViewTowPlanePrompt"
+            android:layout_alignBaseline="@+id/textViewTowPlanePrompt"
+            android:paddingTop="20sp"
+            />
+
+
+
+        <org.mtwashingtonsoaring.logger.InstantAutoComplete
+            android:id="@+id/tvaTowPilot"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/spinnerTowPlane"
+            android:layout_toEndOf="@+id/textViewTowPilotPrompt"
+            android:layout_alignBaseline="@+id/textViewTowPilotPrompt"
+            android:paddingBottom="20sp"
+            android:hint = "Enter Pilot Name"
+            android:selectAllOnFocus="true"
+            />
+
+        <TextView
+            android:id="@+id/textViewTowPilotPrompt"
+            android:text="Tow Pilot:"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/textViewTowPlanePrompt"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="20sp"
+            />
+
+        <EditText
+            android:id="@+id/editTextTowHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="3"
+            android:layout_alignTop="@+id/textViewTowHeight"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="20sp"
+            android:paddingBottom="20sp"/>
+
+        <TextView
+            android:id="@+id/textViewTowHeight"
+            android:text="Tow Alt:"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/viewTowSection"
+            android:layout_toLeftOf="@id/editTextTowHeight"
+            android:paddingTop="20sp"
+            android:paddingBottom="20sp"/>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:id="@+id/viewTakeoffSeperator"
+            android:layout_below="@+id/textViewTowPilotPrompt"
+            android:paddingTop="20sp"
+            android:paddingBottom="20sp"/>
+
+        <EditText
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="6"
+            android:gravity="center_horizontal"
+            android:id="@+id/editTextTakeOffTime"
+            android:layout_below="@+id/textViewTakeOffPrompt"
+            android:layout_alignParentStart="true"
+            android:maxLength="6"
+            />
+
+        <EditText
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="6"
+            android:id="@+id/editTextLandingTime"
+            android:layout_alignTop="@+id/editTextTakeOffTime"
+            android:layout_alignParentEnd="true"
+            android:maxLength="6"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Take Off"
+            android:id="@+id/textViewTakeOffPrompt"
+            android:layout_below="@+id/viewTakeoffSeperator"
+            android:layout_alignLeft="@+id/editTextTakeOffTime"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Landing"
+            android:id="@+id/textViewLandingPrompt"
+            android:layout_below="@+id/viewTakeoffSeperator"
+            android:layout_alignRight="@+id/editTextLandingTime"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Comments:"
+            android:id="@+id/textViewComments"
+            android:layout_below="@+id/editTextTakeOffTime"
+            android:layout_alignParentStart="true" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:id="@+id/viewCommentSeperator"
+            android:layout_below="@+id/editTextLandingTime"
+            android:paddingTop="20sp"
+            android:paddingBottom="20sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editTextComments"
+            android:layout_below="@+id/textViewComments"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            />
+
+
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>

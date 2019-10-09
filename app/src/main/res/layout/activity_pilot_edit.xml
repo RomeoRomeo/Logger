@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:measureWithLargestChild="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/first_name_prompt_string"
+                android:id="@+id/promptPilotName"
+                android:layout_column="2"
+                android:textAlignment="viewEnd" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextPilotName"
+                android:layout_column="3"
+                android:nestedScrollingEnabled="true" />
+        </TableRow>
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/club_prompt_string"
+           android:layout_column="2"
+            android:id="@+id/promptClub"
+           android:textAlignment="viewEnd"
+           android:singleLine="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters|textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextClub"
+            android:layout_column="3"
+            android:nestedScrollingEnabled="true" />
+       </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/cell_num_prompt_string"
+                android:id="@+id/promptCellNum"
+                android:layout_column="2"
+                android:textAlignment="viewEnd"
+                android:nestedScrollingEnabled="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editTextCellNum"
+                android:phoneNumber="true"
+                android:capitalize="characters"
+                android:hyphenationFrequency="normal"
+                android:inputType="phone"
+                android:layout_column="3"
+                android:nestedScrollingEnabled="true" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/e_phone_num_prompt_string"
+                android:textAlignment="viewEnd"
+                android:layout_column="2"
+                android:id="@+id/promptEPhoneNum" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editTextEPhone"
+                android:phoneNumber="true"
+                android:capitalize="characters"
+                android:hyphenationFrequency="normal"
+                android:inputType="phone"
+                android:layout_column="3"
+                android:nestedScrollingEnabled="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/email_prompt_string"
+                android:id="@+id/prompteMail"
+                android:textAlignment="textEnd"
+                android:layout_column="2" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/editTexteMail"
+                android:layout_column="3"
+                android:textAlignment="textStart" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/e_contact_prompt_string"
+            android:id="@+id/promptEContact"
+            android:textAlignment="textEnd"
+            android:layout_column="2" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords|textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextEContact"
+            android:paddingStart="10dp"
+            android:layout_column="3"
+            android:nestedScrollingEnabled="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/e_location_prompt_string"
+                android:id="@+id/textViewELocation"
+                android:textAlignment="textEnd"
+                android:layout_column="2" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextELocation"
+                android:paddingStart="10dp"
+                android:phoneNumber="true"
+                android:capitalize="words"
+                android:layout_column="3"
+                android:nestedScrollingEnabled="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/comments_prompt_string"
+                android:id="@+id/textViewComments"
+                android:textAlignment="textEnd"
+                android:layout_column="2" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextComments"
+                android:layout_column="3"
+                android:nestedScrollingEnabled="true" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

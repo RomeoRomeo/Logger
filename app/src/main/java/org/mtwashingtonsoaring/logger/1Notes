@@ -1,0 +1,8 @@
+adding pilots should bring the spinner back full, alpha sorted and selected on new pilot.
+
+Data Structure
+
+pilots String Name = keyfield
+gliders String CID = keyfield
+flights String id = keyfield and is created by millisconds
+towplanes members are unique
